@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.game-container {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.score-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+#start-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff5722;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#start-btn:hover {
+  background: #e64a19;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.hole {
+  width: 120px;
+  height: 120px;
+  background: #3e2723;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px #000;
+}
+
+.mole {
+  width: 80px;
+  height: 80px;
+  background: #8b4513 url('mole.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease-out;
+  cursor: pointer;
+}
+
+.hole.up .mole {
+  bottom: 10px;
+}
+
+.particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: yellow;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-move 0.5s ease-out forwards;
+}
+
+@keyframes particle-move {
+  to {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.5);
+  }
+}

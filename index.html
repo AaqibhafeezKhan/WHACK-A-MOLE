@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whack-a-Mole</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <header>
+      <h1>Whack-a-Mole</h1>
+      <div class="score-timer">
+        <span>Score: <span id="score">0</span></span>
+        <span>Time: <span id="time">30</span>s</span>
+      </div>
+      <button id="start-btn">Start Game</button>
+    </header>
+    <div class="board">
+      <div class="hole" data-hole="1">
+        <div class="mole"></div>
+      </div>
+      <div class="hole" data-hole="2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole" data-hole="3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole" data-hole="4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole" data-hole="5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole" data-hole="6">
+        <div class="mole"></div>
+      </div>
+      <div class="hole" data-hole="7">
+        <div class="mole"></div>
+      </div>
+      <div class="hole" data-hole="8">
+        <div class="mole"></div>
+      </div>
+      <div class="hole" data-hole="9">
+        <div class="mole"></div>
+      </div>
+    </div>
+  </div>
+  <audio id="pop-sound" src="sounds/pop.mp3"></audio>
+  <audio id="hit-sound" src="sounds/hit.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
